@@ -71,7 +71,7 @@ const contactForm = {
             address: inputContactAddress
         }
         contactCollection.postAllContacts(newContact)
-        location.reload(true);
+
         }
     }
 
