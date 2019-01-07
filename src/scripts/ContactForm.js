@@ -1,6 +1,5 @@
 import contactCollection from "./ContactCollection"
 
-
 const contactForm = {
     createAndAppendForm() {
         let formHeader = document.createElement("h3")
@@ -58,19 +57,22 @@ const contactForm = {
         let formArticle = document.querySelector(".form")
         formArticle.appendChild(contactFormFragment)
     },
-    handleAddNewFood (event) {
+    handleAddNewFood () {
         let inputContactName = document.querySelector("#contact-name").value
         let inputContactNumber = document.querySelector("#contact-number").value
         let inputContactAddress = document.querySelector("#contact-address").value
 
+        console.log(inputContactAddress)
+
         let newContact = {
             name: inputContactName,
             number: inputContactNumber,
-            address: inputContactAddress,
+            address: inputContactAddress
         }
-        contactCollection.handleAddNewFood(newContact)
+        contactCollection.postAllContacts(newContact)
 
+        }
     }
-}
 
-export default contactForm
+
+export default contactForm;

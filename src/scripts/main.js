@@ -3,3 +3,4 @@ import contactForm from "./ContactForm"
 
 contactList.contactify()
 contactForm.createAndAppendForm()
+
