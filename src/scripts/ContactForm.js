@@ -41,11 +41,12 @@ const contactForm = {
         contactAddressField.appendChild(contactAddressLabel)
         contactAddressField.appendChild(contactAddressInput)
 
+
         let submitButton = document.createElement("button")
         submitButton.textContent = "Add Contact"
         submitButton.setAttribute("class", "contact-save")
 
-        submitButton.addEventListener("click", this.handleAddNewFood)
+        submitButton.addEventListener("click", contactForm.handleAddNewContact)
 
         let contactFormFragment = document.createDocumentFragment()
         contactFormFragment.appendChild(formHeader)
@@ -57,7 +58,7 @@ const contactForm = {
         let formArticle = document.querySelector(".form")
         formArticle.appendChild(contactFormFragment)
     },
-    handleAddNewFood () {
+    handleAddNewContact () {
         let inputContactName = document.querySelector("#contact-name").value
         let inputContactNumber = document.querySelector("#contact-number").value
         let inputContactAddress = document.querySelector("#contact-address").value
@@ -70,7 +71,7 @@ const contactForm = {
             address: inputContactAddress
         }
         contactCollection.postAllContacts(newContact)
-
+        location.reload(true);
         }
     }
 

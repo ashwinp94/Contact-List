@@ -11,7 +11,9 @@ const contactCollection = {
           "Content-Type": "application/json"
       },
         body: JSON.stringify(newContactToSave)
+
     })
+    location.reload(true);
   }
 }
 

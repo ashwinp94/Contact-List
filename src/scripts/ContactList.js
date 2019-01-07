@@ -11,7 +11,10 @@ const contactList = {
                 contactDocFragment.appendChild(contactHTML)
             });
             let outputArticle = document.querySelector(".output")
-            outputArticle.appendChild(contactDocFragment)
+            while(outputArticle.firstChild){
+                outputArticle.removeChild(outputArticle.firstChild)
+            }
+                outputArticle.appendChild(contactDocFragment)
 
         })
     }
