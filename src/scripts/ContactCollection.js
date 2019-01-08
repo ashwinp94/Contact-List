@@ -12,7 +12,7 @@ const contactCollection = {
       },
         body: JSON.stringify(newContactToSave)
     })
-    location.reload(true);
+    // location.reload(true);
   }
 }
 

@@ -41,7 +41,6 @@ const contactForm = {
         contactAddressField.appendChild(contactAddressLabel)
         contactAddressField.appendChild(contactAddressInput)
 
-
         let submitButton = document.createElement("button")
         submitButton.textContent = "Add Contact"
         submitButton.setAttribute("class", "contact-save")
@@ -63,15 +62,16 @@ const contactForm = {
         let inputContactNumber = document.querySelector("#contact-number").value
         let inputContactAddress = document.querySelector("#contact-address").value
 
-        console.log(inputContactAddress)
-
         let newContact = {
             name: inputContactName,
             number: inputContactNumber,
             address: inputContactAddress
         }
         contactCollection.postAllContacts(newContact)
-
+        .then(response => {
+            contactList.contactify()
+            console.log(response)
+             })
         }
     }
 
