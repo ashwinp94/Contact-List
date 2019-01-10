@@ -5,7 +5,7 @@ const contactCollection = {
         .then(response => response.json())
     },
     postAllContacts(newContactToSave){
-        fetch("http://localhost:8088/contacts", {
+       return fetch("http://localhost:8088/contacts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
